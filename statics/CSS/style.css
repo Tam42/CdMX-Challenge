@@ -1,0 +1,9 @@
+#fondo{
+    background: url(med2.png) no-repeat center center fixed;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: initial;
+    background-color: black;
+}
+
