@@ -13,13 +13,15 @@
   $user = $_POST['user'];
   $psw = $_POST['password'];
   if ($user) {
+    $bd = "SELECT status FROM user WHERE user LIKE '$user'";
+    $status = mysqli_query($conexion, $bd);
     $preresult = "SELECT password FROM user WHERE user LIKE '$user'";
     $consult= mysqli_query($conexion, $preresult);
     $count=mysqli_num_rows($consult);
     if($count==1){
         session_start();
         $_SESSION['user'] = $user;
-        $_SESSION['name'] = $name;
+        $_SESSION['status'] = $status;
         echo "Hi";
     }
     else{
