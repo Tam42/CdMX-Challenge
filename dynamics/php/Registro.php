@@ -38,7 +38,7 @@
       else{
         echo "Usuario existente";
         echo "<br>";
-        echo "<a href='../../index.html'>Elegir otro usuario</a>";
+        echo "<a href='../dyanamics/php/registro.html'>Elegir otro usuario</a>";
       }
     }
   }
