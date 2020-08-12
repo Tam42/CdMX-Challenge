@@ -10,11 +10,11 @@
     exit();
   }
   else {
-    $name = (isset($_POST['name']) && $_POST['name'] != "") ? escapeAll($_POST['name']) : false ;
-    $last_name = (isset($_POST['last_name']) && $_POST['last_name'] != "") ? escapeAll($_POST['last_name']) : false ;
-    $user = (isset($_POST['user']) && $_POST['user'] != "") ? escapeAll($_POST['user']) : false ;
-    $password = (isset($_POST['password']) && $_POST['password'] != "") ? escapeAll($_POST['password']) : false ;
-    $genre = (isset($_POST['genre']) && $_POST['genre'] != "") ? escapeAll($_POST['genre']) : false ;
+    $name = (isset($_POST['name']) && $_POST['name'] != "") ? $_POST['name'] : false ;
+    $last_name = (isset($_POST['last_name']) && $_POST['last_name'] != "") ? $_POST['last_name'] : false ;
+    $user = (isset($_POST['user']) && $_POST['user'] != "") ? $_POST['user'] : false ;
+    $password = (isset($_POST['password']) && $_POST['password'] != "") ? $_POST['password'] : false ;
+    $genre = (isset($_POST['genre']) && $_POST['genre'] != "") ? $_POST['genre'] : false ;
     $age = (isset($_POST['age']) && $_POST['age'] != "");
     $status = 0;
     if($name === false || $last_name === false || $user === false || $password=== false || $genre === false){
@@ -22,7 +22,7 @@
     }
     else{
 
-      $SQL_usr = "INSERT INTO Challenge(user, name, last_name, password, genre, age, status) VALUES ('$user', '$name', '$last_name', '$password', '$genre', '$age', '$status')";
+      $SQL_usr = "INSERT INTO user(user, name, last_name, password, genre, age, status) VALUES ('$user', '$name', '$last_name', '$password', '$genre', '$age', '$status')";
       $query_usr = mysqli_query($conexion,$SQL_usr);
 
       if($query_usr){
