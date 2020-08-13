@@ -16,6 +16,11 @@
     src: url("../Fonts/DM_Sans/DMSans-Regular.ttf");
 }
 
+@font-face{
+    font-family: "Bold";
+    src: url("../Fonts/DM_Sans/DMSans-Bold.ttf");
+}
+
 
 
 #fondo {
@@ -61,4 +66,37 @@ h1 {
     font-family: 'Medium';
 }
 
+#video{
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    font-family: 'Regular';
+    font-size: 60px;
+    color: black;
+}
+
+@media screen and (max-width: 700px) {
+    h3 {
+    font-family: 'Regular';
+    font-size: 30px;
+    color: black;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    h3 {
+    font-family: 'Regular';
+    font-size: large;
+    color: black;
+    }
+}
+
+.texto {
+    font-size: larger;
+    text-align: justify;
+    line-height: 35px;
+    color: rgb(32, 31, 31);
+}
 
