@@ -14,7 +14,24 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2">
+            <a class="navbar-brand" href="../index.html">CHATBOT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="../index">INICIO <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="../templates/registro.html">REGÍSTRATE<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="../templates/ayuda.html">AYUDA<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="../templates/conoce.html">CONÓCENOS<span class="sr-only">(current)</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <div class="container">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
             <div class="navbar-header">
@@ -34,4 +51,4 @@
             </ul>
             </div>
             </div>
-        </nav>
+        </nav> -->
