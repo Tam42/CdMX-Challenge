@@ -131,7 +131,7 @@ if (isset($_GET['msg'])) {
                     $change="UPDATE user SET status='1' WHERE status='0' AND user='$user'";
                     $query_status = mysqli_query($conexion,$change);
                     if($query_status){
-                        echo "Cuidado"; 
+                        echo "Cuidado "; 
                     }
                     else{
                         echo "ay";
