@@ -31,6 +31,8 @@
 
         if($query_usr){
           echo "Usuario creado con éxito";
+          echo "<br>";
+          echo "<a href='../../index.html'>Iniciar sesión</a>";
         }else{
           echo "Problemas al crear el usuario";
         }
