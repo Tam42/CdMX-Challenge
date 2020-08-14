@@ -87,7 +87,7 @@ h2 {
 
 h3 {
     font-family: 'Regular';
-    font-size: 60px;
+    font-size: 70px;
     color: black;
 }
 
@@ -145,7 +145,7 @@ footer {
     transition-property: margin-right;
     border-radius: 1rem;
     height: 50px;
-    background-color: rgb(136, 216, 236);
+    background-color: rgb(131, 192, 207);
     font-size: 20px;
     text-align: center;
     padding: 10px 10px 0px 10px;
@@ -153,7 +153,7 @@ footer {
 }
 
 #pregunta:hover {
-    background-color: rgb(23, 141, 151);
+    background-color: rgb(39, 134, 143);
     color: white;
     margin-right: 30%;
 }
@@ -169,7 +169,7 @@ footer {
     transition-property: margin-left;
     border-radius: 1rem;
     height: 50px;
-    background-color: rgb(0, 110, 255);
+    background-color: rgb(26, 96, 189);
     font-size: 20px;
     text-align: center;
     padding: 10px 10px 0px 10px;
@@ -178,7 +178,7 @@ footer {
 }
 
 #pregunta1:hover {
-    background-color: rgba(57, 124, 233, 0.829);
+    background-color: rgba(51, 104, 189, 0.829);
     color: black;
     margin-left: 30%;
 }
@@ -187,4 +187,14 @@ footer {
     font-size: large;
     color: white;
     text-align: justify;
+}
+
+#itemC {
+    height: 530px;
+}
+
+@media screen and (max-width: 700px) {
+    #itemC {
+    height: 100%;
+    }
 }
