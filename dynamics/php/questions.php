@@ -104,7 +104,7 @@ $questions = [
     //name
     "como te llamas?" =>"Soy CoronaBot y estoy para servirte",
     "cual es tu nombre?" =>"Soy CoronaBot y estoy para servirte",
-    "tienes nombre?" =>"Soy CoronaBot y estoy para servirte",
+    "tienes nombre?" =>"Soy CoronaBot y estoy para servirte" . $status,
 
 
     //saludo
