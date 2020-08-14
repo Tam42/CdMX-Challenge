@@ -2,74 +2,81 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CORONABOT | Ayuda</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../statics/CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CORONABOT | Conócenos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../statics/CSS/style.css">
 </head>
+
 <body>
-  <br>
-  <div class="d-flex justify-content-center">
-    <h3>¿QUÉ ES UN CHATBOT?</h3>
-  </div>
-  <div class="row">
-    <div class="col-1">
-    </div>
-    <div class="col-10">
-      <div class="texto">
-        <p>Un chatbot es un programa informático con el que es posible mantener una conversación, tanto si queremos
-          pedirle
-          algún tipo de información o que lleve a cabo una acción. A través de nuestro chatbot, CoronaBot, podrá hacer
-          preguntas acerca de la reciente enfermedad COVID-19. De igual manera al registrarse si se trata de un
-          paciente
-          Covid nuestro programa se encargará de llevar la cuenta de los días que debe permanecer en aislamiento y le
-          proporcionará consejos.</p>
+
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="itemC">
+        <img src="../../statics/media/code.jpg" class="d-block w-100" alt="chatbot">
+      </div>
+      <div class="carousel-item" id="itemC">
+        <img src="../../statics/media/stop.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" id="itemC">
+        <img src="../../statics/media/pandemic.jpeg" class="d-block w-100" alt="...">
       </div>
     </div>
-    <div class="col-1">
-    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
   <br>
+
+<div class="container">
   <div class="row">
-    <div class="col-1">
+    <div class="col-0">
 
     </div>
-    <div class="col-10">
-      <aside>
-        <video id="video" src="../../statics/media/info.mp4" alt="video" autoplay muted loop></video>
-      </aside>
+    <div class="col-12">
+      <h3 class="text-center">¿QUIÉNES SOMOS?</h3><br>
+      <p style="color: rgb(34, 33, 33); font-size: large; text-align: justify;">Somos un grupo de jóvenes amantes de la
+        ciencia y la programación, pertenecemos a distintos países de
+        Latinoamérica y esto nos ha ayudado a presenciar distintos contextos que se enfrentan en el mundo a causa de
+        la actual pandemia generada por el Sars-Cov-2. El equipo se encuentra muy diversificado, pues somos alumnos
+        tanto de preparatoria como de universidad y las áreas de conocimiento en las que se desempeña cada uno son muy
+        variadas como salud, ingeniería en computación, programación, economía, diseño, además de que manejamos
+        distintos idiomas.
+      </p>
+    </div>
+    <div class="col-0">
+
     </div>
   </div>
-  <div class="col-1">
   </div>
 
   <br>
-  <div class="d-flex justify-content-center">
-    <h3>¿QUIÉNES SOMOS?</h3>
-  </div>
-
-  <br>
-  <div class="row">
-    <div class="col-1">
-
-    </div>
-    <div class="col-10">
-      <div class="texto">
-        <p>Somos un grupo de jóvenes amantes de la ciencia y la programación, pertenecemos a distintos países de
-          Latinoamérica y esto nos ha ayudado a presenciar distintos contextos que se enfrentan en el mundo a causa de
-          la actual pandemia generada por el Sars-Cov-2. El equipo se encuentra muy diversificado, pues somos alumnos
-          tanto de preparatorio como de universidad y las áreas de conocimiento en las que se desempeña cada uno son muy
-          variadas como salud, ingeniería en computación, programación, economía, diseño, además de que manejamos
-          distintos idiomas. </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm text-center">
+        <h4>CONTÁCTANOS</h4>
+        <div class="text-left" style="margin-left: 30px;">
+        <p><img src="../../statics/media/mail.png" style="height: 40px;"> tamaraarenas2058@gmail.com</p>
+        <p><img src="../../statics/media/mail.png" style="height: 40px;"> christian.23.10@hotmail.com</p>
+        <p><img src="../../statics/media/mail.png" style="height: 40px;"> katloligny25@gmail.com</p>
+        <p><img src="../../statics/media/mail.png" style="height: 40px;"> luis.francisco.flores.cruz@uabc.edu.mx</p>
+        <p><img src="../../statics/media/mail.png" style="height: 40px;"> reginamoga0103@gmail.com</p>
+      </div>
+      </div>
+      <div class="col-sm text-center">
+        <img src="../../statics/media/mapa.png" style="height: 350px;">
       </div>
     </div>
   </div>
-  <div class="col-1">
-  </div>
-
+  <br><br>
   <footer class="footer mt-auto py-3">
     Chatbot desarrollado en Challenge CdeCMx 2020 con Thomas Donoghue.
   </footer>

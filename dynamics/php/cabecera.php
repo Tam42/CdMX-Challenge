@@ -19,10 +19,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                  <a class="nav-link active <?php echo $pagina == 'inicio' ? 'active' : ''; ?>" href="?p=inicio">Inicio<span class="sr-only"(current)></span></a>
-                  <a class="nav-link active <?php echo $pagina == 'ayuda' ? 'active' : ''; ?>" href="?p=conoce">Contáctanos<span class="sr-only">(current)</span></a>
-                  <a class="nav-link active <?php echo $pagina == 'ayuda' ? 'active' : ''; ?>" href="?p=ayuda">Ayuda<span class="sr-only">(current)</span></a>
-                  <a class="nav-link active <?php echo $pagina == 'cerrar' ? 'active' : ''; ?>" href="?p=cerrar">Cerrar Sesión<span class="sr-only">(current)</span></a>
+                  <a class="nav-link active <?php echo $pagina == 'inicio' ? 'active' : ''; ?>" href="?p=inicio">INICIO<span class="sr-only"(current)></span></a>
+                  <a class="nav-link active <?php echo $pagina == 'ayuda' ? 'active' : ''; ?>" href="?p=ayuda">AYUDA<span class="sr-only">(current)</span></a>
+                  <a class="nav-link active <?php echo $pagina == 'conoce' ? 'active' : ''; ?>" href="?p=conoce">CONÓCENOS<span class="sr-only">(current)</span></a>
+                  <a class="nav-link active <?php echo $pagina == 'cerrar' ? 'active' : ''; ?>" href="?p=cerrar">CERRAR SESIÓN<span class="sr-only">(current)</span></a>
             </div>
           </nav>
     </header>
