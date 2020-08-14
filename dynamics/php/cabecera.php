@@ -2,37 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width", initial-scale=1.0">
+    <meta name="viewport" content="width", initial-scale="1.0">
     <title>Chatbot</title>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="statics/CSS/style.css">
 </head>
 <body>
-
-    <div class="container">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand"href="#">CoronaBot</a>
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2">
+            <a class="navbar-brand" href="#">CHATBOT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <ul class="navbar-nav">
+                <li class="nav-link active <?php echo $pagina == 'inicio' ? 'active' : ''; ?>"><a href="?p=inicio">Inicio<span class="sr-only">(current)</span></a></li>
+                <li class="nav-link active <?php echo $pagina == 'nosotros' ? 'active' : ''; ?>"><a href="?p=nosotros">Nosotros<span class="sr-only">(current)</span></a></li>
+                <li class="nav-link active <?php echo $pagina == 'contactanos' ? 'active' : ''; ?>"><a href="?p=contactanos">Contáctanos<span class="sr-only">(current)</span></a></li>
+                <li class="nav-link active <?php echo $pagina == 'ayuda' ? 'active' : ''; ?>"><a href="?p=ayuda">Ayuda<span class="sr-only">(current)</span></a></li>
+                <li class="nav-link active" style="margin-left: 1130px;"><a href="cerrar.php">Cerrar Sesión<span class="sr-only">(current)</span></a></li>
+              </ul>
             </div>
-
-            <div class="collapse navbar-collapse"id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-            <li class="<?php echo $pagina == 'inicio' ? 'active' : ''; ?>"><a href="?p=inicio">Inicio</a></li>
-            <li class="<?php echo $pagina == 'nosotros' ? 'active' : ''; ?>"><a href="?p=nosotros">Nosotros</a></li>
-            <li class="<?php echo $pagina == 'contactanos' ? 'active' : ''; ?>"><a href="?p=contactanos">Contáctanos</a></li>
-            </ul>
-            </div>
-            </div>
-        </nav>
+          </nav>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    

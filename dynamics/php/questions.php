@@ -170,6 +170,7 @@ if (isset($_GET['msg'])) {
                     }
                 }else{
                     $botty->reply("Te restan $periodoRest día/s de tu periodo de aslamiento, te recordamos resguardarte y en caso de complicaciones llamar a la linea de emergencia nacional (911) para un adecuada atención. ¿Qué dudas tienes?");
+                    $botty->reply("¿Te has sentido con fiebre? Si tu respuesta es afirmativa responde 'tengo fiebre'.");
                 }
                     
         } elseif ($botty->ask($msg, $questions) == "") {
