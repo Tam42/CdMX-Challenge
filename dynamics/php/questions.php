@@ -102,9 +102,9 @@ $questions = [
     //PREGUNTAS
 
     //name
-    "como te llamas?" =>"Soy CoronaBot y estoy para servirte",
-    "cual es tu nombre?" =>"Soy CoronaBot y estoy para servirte",
-    "tienes nombre?" =>"Soy CoronaBot y estoy para servirte",
+    "como te llamas?" =>"Soy CoronaBot y estoy para servirte.",
+    "cual es tu nombre?" =>"Soy CoronaBot y estoy para servirte.",
+    "tienes nombre?" =>"Soy CoronaBot y estoy para servirte.",
 
 
     //saludo
@@ -131,7 +131,6 @@ $questions = [
 if (isset($_GET['msg'])) {
     $user = $_SESSION['user'];
     $status = $_SESSION['status'];
-    $periodoRest=14;
     $msg = strtolower($_GET['msg']);
     $bot->hears($msg, function (Bot $botty) {
         global $msg;
@@ -140,11 +139,34 @@ if (isset($_GET['msg'])) {
         global $periodoRest;//consulta a la bd
         global $user;//session
         if ($msg == 'hi' || $msg == "hello" || $msg == "hola" || $msg == "un saludo") {
-            $botty->reply("Hola " . $user);//NOMBRE DE USUARIO EN SESION
             if ($status==0) {//usuario sin covid, CONSULTA BD
+                $botty->reply("Hola " . $user . ". ");//NOMBRE DE USUARIO EN SESION
                 $botty->reply(" Tienes o has presentado sintomas de coronavirus? Si tu respuesta es afirmativa confirma 'Tengo covid' o 'Presento sintomas de covid'.");
             }else {
-                $botty->reply("Te restan $periodoRest día/s de tu periodo de aslamiento, te recordamos resguardarte y en caso de complicaciones llamar a la linea de emergencia nacional (911) para un adecuada atención. ¿Qué dudas tienes?");
+                $botty->reply("Hola " . $user . ". ");//NOMBRE DE USUARIO EN SESION
+                if(isset($_COOKIE["status"])){
+                $botty->reply("Tu periodo de aislamiento inicio el " . $_COOKIE["status"] . " ,te recordamos resguardarte y en caso de complicaciones llamar a la linea de emergencia nacional (911) para un adecuada atención. ¿Qué dudas tienes?");
+                }
+                else{
+                    $conexion = connect();
+                    if(!$conexion) {
+                      echo "No se pudo conectar con el servidor. <br>
+                      Cuando llames a apoyo técnico, muéstrales el texto a continuación:";
+                      echo mysqli_connect_error()."<br>";
+                      echo mysqli_connect_errno()."<br>";
+                      exit();
+                    }
+                    else {
+                    $change="UPDATE user SET status='0' WHERE status='1' AND user='$user'";
+                    $query_status = mysqli_query($conexion,$change);
+                    if($query_status){
+                        echo "Ya no tienes covid.";
+                    }
+                    else{
+                        echo "No se pudo conectar a la base de datos.";
+                    }
+                    }
+                }
             }
         }elseif ($msg == 'tengo covid' || $msg == 'presento sintomas de covid'){
                 if ($status==0) {
@@ -162,15 +184,19 @@ if (isset($_GET['msg'])) {
                     $change="UPDATE user SET status='1' WHERE status='0' AND user='$user'";
                     $query_status = mysqli_query($conexion,$change);
                     if($query_status){
-                        echo "Cuidado "; 
+                        date_default_timezone_set('America/Mexico_City');
+                        $date =  date('d-m-Y');
+                        setcookie("status", $date, time()+60*60*24*14);
                     }
                     else{
-                        echo "ay";
+                        echo "No se pudo conectar a la base de datos.";
                     }
                     }
                 }else{
-                    $botty->reply("Te restan $periodoRest día/s de tu periodo de aslamiento, te recordamos resguardarte y en caso de complicaciones llamar a la linea de emergencia nacional (911) para un adecuada atención. ¿Qué dudas tienes?");
-                    $botty->reply("¿Te has sentido con fiebre? Si tu respuesta es afirmativa responde 'tengo fiebre'.");
+                    if(isset($_COOKIE["status"])){
+                        echo "Continuamos dándole segumiento a la enfermedad desde el " . $_COOKIE["status"] . ".";
+                        $botty->reply("¿Te has sentido con fiebre? Si tu respuesta es afirmativa responde 'tengo fiebre'.");
+                    }
                 }
                     
         } elseif ($botty->ask($msg, $questions) == "") {

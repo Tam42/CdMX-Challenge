@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width", initial-scale="1.0">
-    <title>Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CORONABOT | Inicio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="statics/CSS/style.css">
+    <link rel="stylesheet" href="../../statics/CSS/style.css">
 </head>
 <body>
-        <header>
+    <header>
         <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2">
             <a class="navbar-brand" href="#">CHATBOT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <ul class="navbar-nav">
-                <li class="nav-link active <?php echo $pagina == 'inicio' ? 'active' : ''; ?>"><a href="?p=inicio">Inicio<span class="sr-only">(current)</span></a></li>
-                <li class="nav-link active <?php echo $pagina == 'nosotros' ? 'active' : ''; ?>"><a href="?p=nosotros">Nosotros<span class="sr-only">(current)</span></a></li>
-                <li class="nav-link active <?php echo $pagina == 'contactanos' ? 'active' : ''; ?>"><a href="?p=contactanos">Contáctanos<span class="sr-only">(current)</span></a></li>
-                <li class="nav-link active <?php echo $pagina == 'ayuda' ? 'active' : ''; ?>"><a href="?p=ayuda">Ayuda<span class="sr-only">(current)</span></a></li>
-                <li class="nav-link active" style="margin-left: 1130px;"><a href="cerrar.php">Cerrar Sesión<span class="sr-only">(current)</span></a></li>
-              </ul>
+              <div class="navbar-nav">
+                  <a class="nav-link active <?php echo $pagina == 'inicio' ? 'active' : ''; ?>" href="?p=inicio">INICIO<span class="sr-only"(current)></span></a>
+                  <a class="nav-link active <?php echo $pagina == 'ayuda' ? 'active' : ''; ?>" href="?p=ayuda">AYUDA<span class="sr-only">(current)</span></a>
+                  <a class="nav-link active <?php echo $pagina == 'conoce' ? 'active' : ''; ?>" href="?p=conoce">CONÓCENOS<span class="sr-only">(current)</span></a>
+                  <a class="nav-link active <?php echo $pagina == 'cerrar' ? 'active' : ''; ?>" href="?p=cerrar">CERRAR SESIÓN<span class="sr-only">(current)</span></a>
             </div>
           </nav>
     </header>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
