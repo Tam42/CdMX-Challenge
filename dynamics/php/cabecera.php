@@ -13,7 +13,8 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2">
-            <a class="navbar-brand" href="#">CHATBOT</a>
+        <a href="../../index.html"><img src="../../statics/media/logo.png" alt="logo" height="50px"></a>
+      <a href="../../index.html"><img src="../../statics/media/titulo.png" alt="logo" height="30px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,6 +22,7 @@
               <div class="navbar-nav">
                   <a class="nav-link active <?php echo $pagina == 'inicio' ? 'active' : ''; ?>" href="?p=inicio">INICIO<span class="sr-only"(current)></span></a>
                   <a class="nav-link active <?php echo $pagina == 'ayuda' ? 'active' : ''; ?>" href="?p=ayuda">AYUDA<span class="sr-only">(current)</span></a>
+                  <a class="nav-link active <?php echo $pagina == 'referencias' ? 'active' : ''; ?>" href="?p=referencias">REFERENCIAS<span class="sr-only">(current)</span></a>
                   <a class="nav-link active <?php echo $pagina == 'conoce' ? 'active' : ''; ?>" href="?p=conoce">CONÓCENOS<span class="sr-only">(current)</span></a>
                   <a class="nav-link active <?php echo $pagina == 'cerrar' ? 'active' : ''; ?>" href="?p=cerrar">CERRAR SESIÓN<span class="sr-only">(current)</span></a>
             </div>
