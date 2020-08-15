@@ -189,7 +189,6 @@ if (isset($_GET['msg'])) {
             }
         }elseif ($msg == 'tengo covid' || $msg == 'presento sintomas de covid'){
                 if ($status==0) {
-                    $botty->reply("Eso no es buena señal!! Te recomiendo aislarte en un periodo no menor de 14 días para evitar algún contagio externo. a partir de hoy llevaré tu conteo del días de tu aislamiento. 14 días restan desde hoy. ¿Qué dudas tienes?");
                     //$status=1;//registrar en la bd el cambio de estado a covid e iniciar periodo en 14 dias
                     $conexion = connect();
                     if(!$conexion) {
@@ -206,6 +205,7 @@ if (isset($_GET['msg'])) {
                         date_default_timezone_set('America/Mexico_City');
                         $date =  date('d-m-Y');
                         setcookie("status", $date, time()+60*60*24*14);
+                        $botty->reply("Eso no es buena señal!! Te recomiendo aislarte en un periodo no menor de 14 días para evitar algún contagio externo. a partir de hoy llevaré tu conteo del días de tu aislamiento. 14 días restan desde hoy. ¿Qué dudas tienes?");
                     }
                     else{
                         echo "No se pudo conectar a la base de datos.";
