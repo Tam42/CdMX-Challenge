@@ -4,7 +4,7 @@
        
             <div class="chatbox">
                     <div class="header">
-                        <h4> <img src='../../statics/img/bug.png' class='imgRedonda'/> CoronaBot </h4>
+                        <h4> <img src='../../statics/media/logo.png' class='imgRedonda'/> CoronaBot </h4>
                                     
                     </div>
                     
@@ -16,10 +16,10 @@
                     <form class="chat" method="post" autocomplete="off">
                     
                                 <div>
-                                    <input type="text" name="chat" id="chat" placeholder="En que te puedo ayudar?" style=" font-family: cursive; font-size: 20px;">
+                                    <input type="text" name="chat" id="chat" placeholder="En que te puedo ayudar?">
                                 </div>
                                 <div>
-                                    <input type="submit" value="Enviar" id="btn" style="color: #000000;font-family: cursive; font-size: 20px;background: rgb(255, 255, 255);margin-top: 10px;">
+                                    <input type="submit" value="Enviar" id="btn">
                                 </div>
                     </form>
         </div>

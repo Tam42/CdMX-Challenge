@@ -1,3 +1,15 @@
+@charset "UTF-8";
+
+@font-face{
+    font-family: "Navbar";
+    src: url("../Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Regular";
+    src: url("../Fonts/DM_Sans/DMSans-Regular.ttf");
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,10 +17,8 @@
 }
 
 body {
-    background-image: url(../img/fondo.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: rgba(51, 104, 189, 0.829);
+    font-family: 'Navbar';
     font-size: 16px;
     line-height: 16px;
 }
@@ -33,9 +43,9 @@ body {
 }
 
 .header {
-    background: #282928fb;
+    background: white;
     padding: 20px;
-    color: rgb(224, 235, 235);
+    color: rgb(8, 8, 8);
     font-size: 20px;
     margin-bottom: 20px;
 }
@@ -58,7 +68,7 @@ body {
 }
 
 .body {
-    background: rgb(60, 145, 64);
+    background: rgb(207, 206, 204);
     height: 100%;
     width: 100%;
     overflow-y: auto;
@@ -100,7 +110,7 @@ input[type="submit"] {
     height: auto;
     padding: 10px;
     margin: 5px;
-    background-color: #1f1e1e;
+    background-color: #2748a3;
     border-radius: 10px;
     float: right;
     text-align: right;
@@ -109,12 +119,12 @@ input[type="submit"] {
 
 .axel {
     color: white;
-    font-family: cursive;
+    font-family: 'Regular';
     width: 60%;
     height: auto;
     padding: 10px;
     margin: 5px;
-    background-color: rgb(90, 206, 138);
+    background-color: rgb(199, 97, 30);
     border-radius: 10px;
     float: left;
     text-align: left;
@@ -122,7 +132,20 @@ input[type="submit"] {
 }
 
 .imgRedonda {
-    width: 40px;
     height: 40px;
-    border-radius: 150px;
+}
+
+#chat {
+    font-family: 'Regular';
+    font-size: large;
+}
+
+#btn {
+    color: black;
+    font-family: 'Navbar';
+    font-size: large;
+    background-color:  rgb(207, 206, 204);
+    border-radius: 1rem;
+    letter-spacing: 2px;
+    margin-top: 10px;
 }
