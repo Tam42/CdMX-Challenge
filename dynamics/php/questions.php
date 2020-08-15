@@ -161,10 +161,10 @@ if (isset($_GET['msg'])) {
             if ($status==0) {//usuario sin covid, CONSULTA BD
                 $botty->reply("Hola " . $user . ". ");//NOMBRE DE USUARIO EN SESION
                 $botty->reply(" Tienes o has presentado sintomas de coronavirus? Si tu respuesta es afirmativa confirma 'Tengo covid' o 'Presento sintomas de covid'.");
-            }else {
+            }elseif($status==1) {//TIENE COVID
                 $botty->reply("Hola " . $user . ". ");//NOMBRE DE USUARIO EN SESION
                 if(isset($_COOKIE["status"])){
-                $botty->reply("Tu periodo de aislamiento inicio el " . $_COOKIE["status"] . " ,te recordamos resguardarte y en caso de complicaciones llamar a la linea de emergencia nacional (911) para un adecuada atención. ¿Qué dudas tienes?");
+                $botty->reply("Tu periodo de aislamiento dura 14 días, te recordamos resguardarte y en caso de complicaciones llamar a la linea de emergencia nacional (911) para un adecuada atención. ¿Qué dudas tienes?");
                 }
                 else{
                     $conexion = connect();
@@ -179,7 +179,7 @@ if (isset($_GET['msg'])) {
                     $change="UPDATE user SET status='0' WHERE status='1' AND user='$user'";
                     $query_status = mysqli_query($conexion,$change);
                     if($query_status){
-                        echo "Ya no tienes covid.";
+                        echo "Ya no tienes Covid 19. ¿Tienes alguna duda? ";
                     }
                     else{
                         echo "No se pudo conectar a la base de datos.";
@@ -200,12 +200,10 @@ if (isset($_GET['msg'])) {
                       exit();
                     }
                     else {
-                    $change="UPDATE user SET status='1' WHERE status='0' AND user='$user'";
-                    $query_status = mysqli_query($conexion,$change);
-                    if($query_status){
-                        date_default_timezone_set('America/Mexico_City');
-                        $date =  date('d-m-Y');
-                        setcookie("status", $date, time()+60*60*24*14);
+                    $changes="UPDATE user SET status='1' WHERE status='0' AND user='$user'";
+                    $query_statusc = mysqli_query($conexion,$changes);
+                    if($query_statusc){
+                        echo "<br>";
                     }
                     else{
                         echo "No se pudo conectar a la base de datos.";
@@ -213,7 +211,7 @@ if (isset($_GET['msg'])) {
                     }
                 }else{
                     if(isset($_COOKIE["status"])){
-                        echo "Continuamos dándole segumiento a la enfermedad desde el " . $_COOKIE["status"] . ".";
+                        echo "Continuamos dándole segumiento a la enfermedad.";
                         $botty->reply("¿Te has sentido con fiebre? Si tu respuesta es afirmativa responde 'tengo fiebre'.");
                     }
                 }
